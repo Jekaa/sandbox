@@ -18,7 +18,7 @@ import java.util.List;
 @Data
 @Primary
 @PropertySource("classpath:application.properties")
-@ConfigurationProperties(prefix = "ddp.kafka")
+@ConfigurationProperties(prefix = "kafka")
 @Validated
 public class KafkaProperties {
     @Getter
