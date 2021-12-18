@@ -1,4 +1,4 @@
-package ru.sandbox.kafka.consumer;
+package ru.sandbox.kafka;
 
 import com.google.common.collect.ImmutableMap;
 import io.vavr.collection.HashMap;
@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
+import ru.sandbox.kafka.KafkaProperties;
 import ru.sandbox.model.SandboxMessage;
 import ru.sandbox.model.SandboxMessageDeserializer;
 
@@ -25,17 +26,17 @@ import static org.apache.kafka.common.config.SslConfigs.*;
 @EnableKafka
 @Configuration
 @Slf4j
-@EnableConfigurationProperties(KafkaConsumerProperties.class)
+@EnableConfigurationProperties(KafkaProperties.class)
 public class KafkaConsumerConfig {
 
     static final String CONSUMER_FACTORY = "consumerFactory";
     static final String RESPONSE_KAFKA_HANDLER = "responseKafkaHandler";
     static final String RESPONSE_KAFKA_HANDLER_4_FIRST_SESSION = "responseKafkaHandler4Session";
 
-    private final KafkaConsumerProperties kafkaProperties;
+    private final KafkaProperties kafkaProperties;
 
     @Autowired
-    public KafkaConsumerConfig(KafkaConsumerProperties kafkaProperties) {
+    public KafkaConsumerConfig(KafkaProperties kafkaProperties) {
         this.kafkaProperties = kafkaProperties;
     }
 

@@ -5,12 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
-import ru.sandbox.kafka.consumer.KafkaConsumerConfig;
-import ru.sandbox.kafka.consumer.KafkaConsumerProperties;
+import ru.sandbox.kafka.KafkaConsumerConfig;
+import ru.sandbox.kafka.KafkaProperties;
 
 @SpringBootApplication
 @PropertySource("classpath:application.properties")
-@EnableConfigurationProperties({KafkaConsumerProperties.class})
+@EnableConfigurationProperties({KafkaProperties.class})
 @Import({KafkaConsumerConfig.class})
 public class SandboxApplication {
 

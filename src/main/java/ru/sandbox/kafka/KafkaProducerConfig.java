@@ -1,4 +1,4 @@
-package ru.sandbox.kafka.producer;
+package ru.sandbox.kafka;
 
 import com.google.common.collect.ImmutableMap;
 import lombok.extern.slf4j.Slf4j;
@@ -15,19 +15,18 @@ import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.DefaultKafkaHeaderMapper;
-import ru.sandbox.kafka.consumer.KafkaConsumerProperties;
 import ru.sandbox.model.SandboxMessage;
 
 @EnableKafka
 @Configuration
 @Slf4j
-@EnableConfigurationProperties(KafkaProducerProperties.class)
+@EnableConfigurationProperties(KafkaProperties.class)
 public class KafkaProducerConfig {
 
-    private final KafkaConsumerProperties kafkaProperties;
+    private final KafkaProperties kafkaProperties;
 
     @Autowired
-    public KafkaProducerConfig(KafkaConsumerProperties kafkaProperties) {
+    public KafkaProducerConfig(KafkaProperties kafkaProperties) {
         this.kafkaProperties = kafkaProperties;
     }
 

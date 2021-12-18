@@ -1,4 +1,4 @@
-package ru.sandbox.kafka.consumer;
+package ru.sandbox.kafka;
 
 import lombok.Data;
 import lombok.Getter;
@@ -19,7 +19,7 @@ import java.util.List;
 @PropertySource("classpath:application.properties")
 @ConfigurationProperties(prefix = "kafka")
 @Validated
-public class KafkaConsumerProperties {
+public class KafkaProperties {
     @Getter
     @Setter
     @NotNull

@@ -1,4 +1,4 @@
-package ru.sandbox.kafka.producer;
+package ru.sandbox.kafka;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
