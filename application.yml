@@ -1,0 +1,35 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+      import-check:
+        enabled: false
+
+kafka:
+  bootstrapServers:
+    - localhost:9092
+  inTopics:
+    - inTopic01
+    - inTopic02
+
+  outTopics:
+    - outTopic01
+    - outTopic02
+
+  groupId: ddpGroup
+  maxPollRecords: 100
+  autocommitEnabled: true
+  autocommitIntervalMs: 500
+  consumerSessionTimeoutSec: 30
+  listenerConcurrency: 1
+  producerLingerMs: 10
+  producerMaxBlockMs: 2000
+  sslEnabled: true
+  keyStoreLocation: /path/to/certs/kafka/keystore.jks
+  keyStorePassword: 123456
+  trustStoreLocation: /path/to/certs/kafka/truststore.jks
+  trustStorePassword: 123456
+  securityProtocol: SSL
+
+logging:
+  config: etc/logback-example.xml
