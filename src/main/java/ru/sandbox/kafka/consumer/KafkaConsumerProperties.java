@@ -27,11 +27,11 @@ public class KafkaConsumerProperties {
     @Getter
     @Setter
     @NotNull
-    private List<String> inTopics;
+    private String inTopic;
     @Getter
     @Setter
     @NotNull
-    private List<String> outTopics;
+    private String outTopic;
     @Getter
     @Setter
     @NotBlank

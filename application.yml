@@ -8,13 +8,8 @@ spring:
 kafka:
   bootstrapServers:
     - localhost:9092
-  inTopics:
-    - inTopic01
-    - inTopic02
-
-  outTopics:
-    - outTopic01
-    - outTopic02
+  inTopic: inTopic01
+  outTopic: outTopic01
 
   groupId: ddpGroup
   maxPollRecords: 100

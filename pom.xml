@@ -48,6 +48,13 @@
 			<version>5.8.2</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.vavr/vavr-jackson -->
+		<dependency>
+			<groupId>io.vavr</groupId>
+			<artifactId>vavr-jackson</artifactId>
+			<version>0.10.3</version>
+		</dependency>
+
 		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-activemq</artifactId>
